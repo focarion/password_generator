@@ -33,7 +33,7 @@ fn main() {
         let mut file = File::create("./passwords.txt").unwrap();
         cfg_if::cfg_if! {
             if #[cfg(target_os = "windows")] {
-                writeln!(file, "{}", password_vec.join("/n")).unwrap();
+                writeln!(file, "{}", password_vec.join("\r\n")).unwrap();
             } else {
                 writeln!(file, "{}", password_vec.join("\n")).unwrap();
             }
