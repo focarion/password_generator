@@ -9,3 +9,11 @@ edition = "2021"
 rand = "0.8.5"
 text_io = "0.1.12"
 cfg-if = "1.0.0"
+rand-utf8 = "0.0.1"
+
+[dev-dependencies]
+criterion = "0.4.0"
+
+[[bench]]
+name = "benchmarks"
+harness = false
